@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="delete_button"
+        android:id="@+id/detail_menu_delete_button"
+        android:icon="@drawable/ic_delete_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:title="Background Colour"
+        android:id="@+id/pick_color_button"
+        android:icon="@drawable/ic_palette_black_24dp"
+        app:showAsAction="always"/>
+</menu>
