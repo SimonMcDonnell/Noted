@@ -35,9 +35,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         String body = mCursor.getString(mCursor.getColumnIndex(NotesContract.COL_BODY));
         holder.view.setCardBackgroundColor(resources.getColor(Utilities.getColor(mCursor.getString(mCursor.getColumnIndex(NotesContract.COL_COLOR)))));
         holder.titleText.setText(title);
-        if (body.length() > 300){
-            body = body.substring(0, 300) + ".....";
-        }
         holder.bodyText.setText(body);
     }
 

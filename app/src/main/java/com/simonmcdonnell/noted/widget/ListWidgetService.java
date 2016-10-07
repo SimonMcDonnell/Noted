@@ -54,9 +54,6 @@ public class ListWidgetService extends RemoteViewsService {
                 RemoteViews views = new RemoteViews(getPackageName(), R.layout.app_widget_item_layout);
                 String title = cursor.getString(cursor.getColumnIndex(NotesContract.COL_TITLE));
                 String body = cursor.getString(cursor.getColumnIndex(NotesContract.COL_BODY));
-                if (body.length() > 300){
-                    body = body.substring(0, 300) + ".....";
-                }
                 views.setTextViewText(R.id.app_widget_list_item_title, title);
                 views.setTextViewText(R.id.app_widget_list_item_body, body);
                 views.setInt(R.id.app_widget_list_item_layout, "setBackgroundResource", Utilities.getColor(cursor.getString(cursor.getColumnIndex(NotesContract.COL_COLOR))));
