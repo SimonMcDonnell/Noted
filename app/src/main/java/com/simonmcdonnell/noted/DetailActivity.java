@@ -58,6 +58,7 @@ public class DetailActivity extends AppCompatActivity {
             oldTitle = "";
             oldBody = "";
             bodyText.requestFocus();
+            showSoftKeyboard();
         }else{
             setTitle("Edit Note");
             noteFilter = NotesContract.COL_ID + " = " + uri.getLastPathSegment();
@@ -69,12 +70,11 @@ public class DetailActivity extends AppCompatActivity {
             titleText.setText(oldTitle);
             bodyText.setText(oldBody);
             setBackgroundColor(oldBackgroundColor);
-            hideSoftKeyboard();
         }
     }
 
-    private void hideSoftKeyboard(){
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    private void showSoftKeyboard(){
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 
     @Override

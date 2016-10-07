@@ -35,7 +35,7 @@
         <activity android:name=".DetailActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/MyTheme"
-            android:windowSoftInputMode="stateVisible"></activity>
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
     </application>
 
 </manifest>
